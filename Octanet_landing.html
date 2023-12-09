@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Things Conference</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,700&family=Roboto:ital,wght@0,400;0,700;1,400;1,700&family=Source+Sans+Pro:ital,wght@0,400;0,700;1,700&family=Work+Sans:ital,wght@0,400;0,700;1,700&display=swap');
+
+        .styling {
+            font-family: Roboto;
+            margin: 10px;
+        }
+
+        .styling-para {
+            text-align: center;
+            margin: 10px;
+        }
+
+        .styling-heading {
+            text-align: center;
+            font-weight: bold;
+            margin: 10px;
+        }
+
+        .image {
+            height: 100vh;
+            width: 100vw;
+        }
+
+        .bottom {
+            align-items: center;
+            display: block;
+            margin: auto;
+        }
+
+        .small-container {
+            padding: 10px;
+            margin: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="sectionhome" class="styling">
+        <div class="styling-container">
+            <img src="https://d1tgh8fmlzexmh.cloudfront.net/ccbp-static-website/conference-img.png" class="image" />
+            <h1 class="styling-heading">The Things Conference</h1>
+            <p class="styling-para">Redefining the future of IoT with LoRaWAN</p>
+            <button class="btn btn-primary bottom" onclick="display('sectionnext')">Know more</button>
+        </div>
+    </div>
+    <div id="sectionnext" class="styling" style="display: none;">
+        <div class="embed-responsive embed-responsive-16by9">
+            <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/vKJ6nXE_6Hc?rel=0" allowfullscreen></iframe>
+        </div>
+        <h1 class="styling-heading">The Things Conference</h1>
+        <p class="styling-para">Join Asia's Largest Conference on LoRaWAN</p>
+        <div class="small-container d-flex flex-row justify-content-center">
+            <div>
+                <h1 class="styling-heading small-container">1400+</h1>
+                <p class="styling-para small-container">Attendees</p>
+            </div>
+            <div>
+                <h1 class="styling-heading small-container">100+</h1>
+                <p class="styling-para small-container">Workshops</p>
+            </div>
+        </div>
+        <div class="small-container d-flex flex-row justify-content-center">
+            <div>
+                <h1 class="styling-heading small-container">40+</h1>
+                <p class="styling-para small-container">Exhibitors</p>
+            </div>
+            <div>
+                <h1 class="styling-heading small-container">6+</h1>
+                <p class="styling-para small-container">Sessions</p>
+            </div>
+        </div>
+        <button class="btn btn-primary bottom" onclick="display('sectionhome')">Back</button>
+    </div>
+
+    <script>
+        function display(id) {
+            document.getElementById('sectionhome').style.display = 'none';
+            document.getElementById('sectionnext').style.display = 'none';
+            document.getElementById(id).style.display = 'block';
+        }
+    </script>
+</body>
+
+</html>
